@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="ServerApplication.Program">
+    <Position X="9.5" Y="2.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServerApplication.Server">
+    <Position X="13" Y="4.25" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAACAAAAAICAAAAAAAAAAAAIAAAAAAAAABAAA=</HashCode>
+      <FileName>Server.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServerApplication.ClientHandler">
+    <Position X="20" Y="9.25" Width="3.25" />
+    <AssociationLine Name="ServerToServe" Type="ServerApplication.Server" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="21.969" Y="9.25" />
+        <Point X="21.969" Y="6.188" />
+        <Point X="16.5" Y="6.188" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="keyData" Type="EncryptionKey" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="21.188" Y="9.25" />
+        <Point X="21.188" Y="7.874" />
+        <Point X="20" Y="7.874" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AgAhAAAAAAAAAAAAIAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ClientHandler.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ServerToServe" />
+      <Property Name="keyData" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ServerApplication.MessageHandler">
+    <Position X="9.5" Y="1" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>MessageHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServerApplication.UserHandler">
+    <Position X="3" Y="1" Width="6.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAwgAIAAABAAACIAAAJACACBIABCIAEQIAAAAgA=</HashCode>
+      <FileName>UserHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServerApplication.ConverterContainer">
+    <Position X="13.25" Y="7" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>ConverterContainer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServerApplication.LoginValues">
+    <Position X="9.5" Y="4" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LoginValues.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServerApplication.Model.Message">
+    <Position X="21.75" Y="3.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAABAgAAAAAAAAAAAAAAAAAACAAAEAAAAAAAAAAQA=</HashCode>
+      <FileName>Model\Message.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="group" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ServerApplication.Model.User">
+    <Position X="15" Y="1" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>QAAAAACgQAAIAAAgAAAAAAEAAAAAAAAFAAIAAgAAAAA=</HashCode>
+      <FileName>Model\User.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="privilege" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ServerApplication.Model.DatabaseContext">
+    <Position X="8.25" Y="6" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>IEAAAAAAAQAAAAAAAAAAAAAAEAgAAAABAAAEAAAAAAA=</HashCode>
+      <FileName>Model\DatabaseContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServerApplication.Users">
+    <Position X="22.5" Y="6.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Users.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServerApplication.UserData">
+    <Position X="15.75" Y="9" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAQAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>UserData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecurityHandler">
+    <Position X="10.25" Y="9" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAQAAAAAAIAAAAAAAIAAgAAAAAAAAA=</HashCode>
+      <FileName>SecurityHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EncryptionKey">
+    <Position X="17.25" Y="7" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>EncryptionKey.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServerApplication.chatData">
+    <Position X="23.75" Y="9.25" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAQAAAAAAAAA=</HashCode>
+      <FileName>ChatData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServerApplication.Model.UserGroupMember">
+    <Position X="23.75" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\UserGroupMember.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServerApplication.Model.UserGroup">
+    <Position X="17.5" Y="4" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAgAAAAAAAAAAAAAAAAAABAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Model\UserGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServerApplication.Model.Privilege">
+    <Position X="19.5" Y="1.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAACAAAA=</HashCode>
+      <FileName>Model\Privilege.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="ServerApplication.Codes">
+    <Position X="12.75" Y="1" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAACAAgCAQAAEAAAAAAAAAAAAAAAEAAAQAAQ=</HashCode>
+      <FileName>Codes.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

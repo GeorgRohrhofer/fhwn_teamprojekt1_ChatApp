@@ -1,0 +1,75 @@
+﻿<Page x:Class="ClientApplication.Pages.Welcome_Window"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ClientApplication.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="600"
+      Title="Welcome_Window">
+
+    <Page.Resources>
+        <Style TargetType="TabItem">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TabItem">
+                        <Border Name="Border" Background="White" Padding="10" BorderBrush="Transparent" BorderThickness="0">
+                            <ContentPresenter ContentSource="Header" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="White" />
+                                <Setter Property="Foreground" Value="Black" />
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="BorderThickness" Value="2" />
+                                <Setter Property="Foreground" Value="Black" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="TextBlock" x:Key="TabItemHeaderTextStyle">
+            <Setter Property="TextDecorations" Value="None" />
+            <Setter Property="FontWeight" Value="Normal" />
+            <Setter Property="Foreground" Value="Black" />
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsSelected, RelativeSource={RelativeSource AncestorType=TabItem}}" Value="True">
+                    <Setter Property="TextDecorations" Value="Underline" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </Page.Resources>
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="11*" />
+            <ColumnDefinition Width="469*" />
+        </Grid.ColumnDefinitions>
+        <TabControl Grid.ColumnSpan="2" BorderBrush="White" VerticalAlignment="Top" Margin="50,100,50,50">
+            <TabControl.Resources>
+                <Style TargetType="{x:Type TabPanel}">
+                    <Setter Property="HorizontalAlignment" Value="Center" />
+                </Style>
+            </TabControl.Resources>
+            <TabItem x:Name="tc_login" Margin="0,-2,0,0" Width="219" GotFocus="tc_login_GotFocus" FontSize="20">
+                <TabItem.Header>
+                    <TextBlock Text="Login" Style="{StaticResource TabItemHeaderTextStyle}" />
+                </TabItem.Header>
+                <Grid>
+                    <Frame x:Name="LoginFrame" NavigationUIVisibility="Hidden" />
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tc_registration" Margin="0,-2,0,0" Width="219" FontSize="18">
+                <TabItem.Header>
+                    <TextBlock Text="Registration" Style="{StaticResource TabItemHeaderTextStyle}" FontSize="20" />
+                </TabItem.Header>
+                <Grid>
+                    <Frame x:Name="RegisterFrame" NavigationUIVisibility="Hidden" />
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Label Content="ChatAPP" HorizontalAlignment="Center" VerticalAlignment="Top" Height="78" Width="210" FontSize="50" Foreground="Black" Grid.Column="1" />
+    </Grid>
+</Page>

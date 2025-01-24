@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="ClientApplication.user_controls.OpenChatsList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ClientApplication.user_controls"
+             xmlns:converter="clr-namespace:ClientApplication.Converters"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="200">
+    <UserControl.Resources>
+        <converter:IsGroupChatConverter x:Key="IsGroupChatConverter"/>
+    </UserControl.Resources>
+    <Grid>
+        <ListBox HorizontalContentAlignment="Stretch" Name="lb_chats" ItemsSource="{Binding Chats}" SelectionChanged="Lb_chats_OnSelectionChanged" SelectionMode="Single">
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Visibility}" Value="true">
+                            <Setter Property="Visibility" Value="Visible"></Setter>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Visibility}" Value="false">
+                            <Setter Property="Visibility" Value="Collapsed"></Setter>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </ListBox.ItemContainerStyle>
+            
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Width="300">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50"></ColumnDefinition>
+                            <ColumnDefinition Width="180"></ColumnDefinition>
+                            <ColumnDefinition Width="50"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="0" Height="50" Width="50">
+                            <Image.Style>
+                                <Style TargetType="Image">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Path=UserCount, Converter={StaticResource IsGroupChatConverter}}" Value="true">
+                                            <Setter Property="Source" Value="../images/group-image.png"></Setter>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Path=UserCount, Converter={StaticResource IsGroupChatConverter}}" Value="false">
+                                            <Setter Property="Source" Value="../images/chat-icon.png"></Setter>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Image.Style>
+                        </Image>
+                        <Label Grid.Column="1" Content="{Binding ChatName}" VerticalContentAlignment="Center"></Label>
+                        <Button Grid.Column="2" HorizontalAlignment="Right" Name="bn_delete_chat" Click="Bn_delete_chat_OnClick" Tag="{Binding ChatId}" Content="Delete" Width="50" Height="30"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</UserControl>

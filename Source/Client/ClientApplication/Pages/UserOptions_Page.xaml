@@ -1,0 +1,101 @@
+﻿<Page x:Class="ClientApplication.Pages.UserOptions_Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ClientApplication.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="UserOptions_Page">
+
+    <Page.Resources>
+        <!--
+        Remove default mouse over color change
+        -->
+        <ControlTemplate x:Key="NoMouseOverButtonTemplate" TargetType="Button">
+            <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+            </Border>
+        </ControlTemplate>
+
+        <Style x:Key="ButtonDesign" TargetType="Button">
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#8163CD"></Setter>
+                </Trigger>
+            </Style.Triggers>
+            <Setter Property="Margin" Value="10,10,10,10"></Setter>
+            <Setter Property="Width" Value="150"></Setter>
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="Background" Value="Black"></Setter>
+            <Setter Property="Foreground" Value="white"></Setter>
+            <Setter Property="BorderThickness" Value="0"></Setter>
+
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"></Setter>
+                </Style>
+            </Style.Resources>
+        </Style>
+
+        <Style x:Key="ButtonPanel" TargetType="StackPanel">
+            <Setter Property="Orientation" Value="Horizontal"></Setter>
+            <Setter Property="FlowDirection" Value="RightToLeft"></Setter>
+        </Style>
+
+        <Style x:Key="LabelStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="20"></Setter>
+        </Style>
+
+        <Style x:Key="TextboxStyle" TargetType="TextBox">
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"></Setter>
+                </Style>
+            </Style.Resources>
+        </Style>
+        
+        <Style x:Key="PWBoxStyle" TargetType="PasswordBox">
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="Template" >
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Border x:Name="border" CornerRadius="5" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                            <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            
+            
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <Label Content="Username" Style="{StaticResource LabelStyle}"></Label>
+            <TextBox Name="tb_username" Style="{StaticResource TextboxStyle}" Text="{Binding Username}"></TextBox>
+
+            <Label Content="Password" Style="{StaticResource LabelStyle}"></Label>
+            <PasswordBox Name="tb_pw_first" Style="{StaticResource PWBoxStyle}" GotFocus="tb_pw_first_GotFocus" LostFocus="tb_pw_first_LostFocus" PasswordChanged="tb_pw_first_PasswordChanged"></PasswordBox>
+            <TextBox Name="tb_pw_txt_first" Style="{StaticResource TextboxStyle}" Visibility="Collapsed" Text="{Binding pwFirst, Mode=TwoWay}" TextChanged="tb_pw_txt_first_TextChanged" GotFocus="tb_pw_txt_first_GotFocus" LostFocus="tb_pw_txt_first_LostFocus"></TextBox>
+            <CheckBox Content="Show Password" Name="cb_show_pw_first" Checked="cb_show_pw_first_Changed" Unchecked="cb_show_pw_first_Changed"></CheckBox>
+
+            <Label Content="Repeat Password" Style="{StaticResource LabelStyle}"></Label>
+            <PasswordBox Name="tb_pw_second" Style="{StaticResource PWBoxStyle}"></PasswordBox>
+            <TextBox Name="tb_pw_txt_second" Style="{StaticResource TextboxStyle}" Visibility="Collapsed" Text="{Binding pwSecond, Mode=TwoWay}"></TextBox>
+            <CheckBox Content="Show Password" Name="cb_show_pw_second" Checked="cb_show_pw_second_Changed" Unchecked="cb_show_pw_second_Changed"></CheckBox>
+            <Label x:Name="lb_lengthpsw" FontSize="15" Content="Password must be at least 8 characters long" Height="30" Width="419" HorizontalAlignment="Left"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Style="{StaticResource ButtonPanel}">
+            <Button Name="btn_save" Style="{StaticResource ButtonDesign}" Click="btn_save_Click" Template="{StaticResource NoMouseOverButtonTemplate}">Save</Button>
+            <Button Name="btn_discard" Style="{StaticResource ButtonDesign}" Click="btn_discard_Click" Template="{StaticResource NoMouseOverButtonTemplate}">Discard</Button>
+        </StackPanel>
+    </Grid>
+</Page>

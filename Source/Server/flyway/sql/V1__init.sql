@@ -1,0 +1,4 @@
+CREATE USER admin WITH PASSWORD 'adminpw';
+GRANT ALL PRIVILEGES ON DATABASE postgres TO admin;
+
+commit;

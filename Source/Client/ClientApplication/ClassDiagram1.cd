@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access" MembersFormat="FullSignature">
+  <Class Name="ClientApplication.Converters.IsGroupChatConverter" BaseTypeListCollapsed="true">
+    <Position X="6.25" Y="5.5" Width="5.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Converters\IsGroupChatConverter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ClientApplication.dialogs.CreateNewChatDialog" BaseTypeListCollapsed="true">
+    <Position X="22.25" Y="0.5" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAQBAAAAAAIAAA=</HashCode>
+      <FileName>dialogs\CreateNewChatDialog.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ClientApplication.dialogs.EditChatWindow" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="1.25" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAABA=</HashCode>
+      <FileName>dialogs\EditChatWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ServerApplication.Model.MessageServer">
+    <Position X="19.5" Y="3.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAgAAAAAAAAAAAAAAAAAACAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>model\MessageServer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientApplication.Pages.AdminOptions_Page" BaseTypeListCollapsed="true">
+    <Position X="17.75" Y="18.25" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AACRAAACAAAAAgAAACABAAAAAAAAAEgAAAAACAAAAAA=</HashCode>
+      <FileName>Pages\AdminOptions_Page.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ClientApplication.Pages.ChatWindowPage" BaseTypeListCollapsed="true">
+    <Position X="22.5" Y="15.75" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAgABIEAAAAABgAAYAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\ChatWindowPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ClientApplication.Pages.Login_Page" BaseTypeListCollapsed="true">
+    <Position X="33" Y="12.5" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAGAAAAAEIAAEEAAAAGEBAAAgAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\Login_Page.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ClientApplication.Pages.Options_Page" BaseTypeListCollapsed="true">
+    <Position X="11.5" Y="17" Width="5.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAACEAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\Options_Page.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ClientApplication.Pages.Register_Page" BaseTypeListCollapsed="true">
+    <Position X="1" Y="16.75" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAEgAAAEAAAACABAIACAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Pages\Register_Page.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ClientApplication.Pages.UserOptions_Page" BaseTypeListCollapsed="true">
+    <Position X="18.5" Y="6.5" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>QACAAAgAAAAAEgACgQIAAAAAhBgAAAAAAAEAAqAAAEA=</HashCode>
+      <FileName>Pages\UserOptions_Page.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ClientApplication.Pages.Welcome_Window" BaseTypeListCollapsed="true">
+    <Position X="6.25" Y="16.75" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\Welcome_Window.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ClientApplication.user_controls.AdminOptions" BaseTypeListCollapsed="true">
+    <Position X="1.5" Y="7.75" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>user_controls\AdminOptions.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ClientApplication.user_controls.ChatMessageList" BaseTypeListCollapsed="true">
+    <Position X="40" Y="1.75" Width="5.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAiQAACIAAgAACIAAAAAGiAgAAAQhAgAAHQAAAAQ=</HashCode>
+      <FileName>user_controls\ChatMessageList.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ClientApplication.user_controls.OnlineUsersView" BaseTypeListCollapsed="true">
+    <Position X="7.25" Y="7.75" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>IAAgACAAAAAgIAAAACAAAAAAiAAAAAgEAAAAAAAAAAA=</HashCode>
+      <FileName>user_controls\OnlineUsersView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ClientApplication.user_controls.OpenChatsList" BaseTypeListCollapsed="true">
+    <Position X="38.25" Y="12.75" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAgAAAEAAAABAAAAABgAgAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>user_controls\OpenChatsList.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ClientApplication.user_controls.SearchBar" BaseTypeListCollapsed="true">
+    <Position X="17.75" Y="14.75" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAAAIABEAAAAAAAAIAEA=</HashCode>
+      <FileName>user_controls\SearchBar.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ClientApplication.ChatWindow" BaseTypeListCollapsed="true">
+    <Position X="2.5" Y="5.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Windows\ChatWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ClientApplication.AdminHandler">
+    <Position X="2" Y="1" Width="7" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAQAAgCAAAAAAAAAABAAAAAAAABAAUgAAAAAAA=</HashCode>
+      <FileName>HandlerClasses\AdminHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientApplication.App">
+    <Position X="13.75" Y="1.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientApplication.ApplicationInfo">
+    <Position X="46.5" Y="4.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAQAAgAAAAAAAAAAACAAIEABAAAAAAAAEAAQ=</HashCode>
+      <FileName>ApplicationInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientApplication.Chat" BaseTypeListCollapsed="true">
+    <Position X="35" Y="2.75" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>IEAAICAAACAAAAAAAAAAAAAAgAgEAACBAAAAhQBAAAQ=</HashCode>
+      <FileName>Chat.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ClientApplication.Client">
+    <Position X="27.75" Y="12.5" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AgCDABAAAAAAAABAgCBQAACAACBAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Client.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientApplication.ConfigFileHandler">
+    <Position X="11.75" Y="14.75" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AACCABAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HandlerClasses\ConfigFileHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientApplication.ConnectionException">
+    <Position X="18.5" Y="12.5" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConnectionException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientApplication.ConverterContainer">
+    <Position X="4.75" Y="14.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>ConverterContainer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientApplication.EditDataHandler">
+    <Position X="12" Y="13" Width="5.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>HandlerClasses\EditDataHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientApplication.ErrorMessage">
+    <Position X="45" Y="9.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>hAAAAAQggAgAQQAAEAAAAIQAAQQACEAAQAAAAiASAEE=</HashCode>
+      <FileName>ErrorMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientApplication.InfoMessage">
+    <Position X="8.5" Y="12.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>InfoMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientApplication.InputValidator">
+    <Position X="18.25" Y="1" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAgAAAAAAAAIAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>InputValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientApplication.LoginHandler">
+    <Position X="0.75" Y="12.25" Width="7" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>HandlerClasses\LoginHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientApplication.MainWindow" BaseTypeListCollapsed="true">
+    <Position X="35.25" Y="8.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ClientApplication.Message" BaseTypeListCollapsed="true">
+    <Position X="28" Y="3.25" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AoAAAACAAAAAAAAAAQCAAAFAgAAAAAAAAAgAAAIIAAA=</HashCode>
+      <FileName>Message.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ClientApplication.RegisterHandler">
+    <Position X="33" Y="1.25" Width="6.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>HandlerClasses\RegisterHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientApplication.SendMessageHandler">
+    <Position X="9.5" Y="3.5" Width="5.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HandlerClasses\SendMessageHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientApplication.User" BaseTypeListCollapsed="true">
+    <Position X="14" Y="5.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAQAAAAEgAAIAIAAAQAiAAEAAgAAAAAAAAAAgA=</HashCode>
+      <FileName>User.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ClientApplication.UserData">
+    <Position X="27.5" Y="10" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAQAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>UserData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientApplication.Util">
+    <Position X="28.25" Y="7.75" Width="6.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Util.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EncryptionKey">
+    <Position X="33" Y="10.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>EncryptionKey.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GroupData">
+    <Position X="23.75" Y="6.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GroupData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MessageHandler">
+    <Position X="23.25" Y="3.25" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAAAQAAAJAAAAAAAAAAQAAA=</HashCode>
+      <FileName>HandlerClasses\MessageHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecurityHandler">
+    <Position X="27.25" Y="1" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAQAAAAAAIAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>HandlerClasses\SecurityHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="RegisterReturnCodes">
+    <Position X="3" Y="10" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AgAAAACAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>RegisterReturnCodes.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,64 @@
+﻿<UserControl x:Class="ClientApplication.user_controls.OnlineUsersView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ClientApplication.user_controls"
+             xmlns:userinfo="clr-namespace:ClientApplication">
+    <UserControl.Resources>
+        <Style x:Key="ListBoxItemTemplate" TargetType="ListBoxItem">
+            <Setter Property="Background" Value="#FFF"></Setter>
+            <Setter Property="Foreground" Value="Black"></Setter>
+        </Style>
+        <Style x:Key="OnlineUserViewStyle">
+
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <ListBox Name="lb_users"  Grid.Row="2" Grid.Column="0" ItemsSource="{Binding Users}" 
+                 VirtualizingStackPanel.IsVirtualizing="True"
+                 VirtualizingStackPanel.VirtualizationMode="Standard"
+                 HorizontalContentAlignment="Stretch"
+                 BorderThickness="0">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal" Height="50">
+                        <CheckBox Name="cb_selection"  IsChecked="{Binding IsSelected, Mode=TwoWay}" VerticalContentAlignment="Center" BorderBrush="Black" Checked="ToggleButton_OnChecked" Unchecked="Cb_selection_OnUnchecked"/>
+                        <Border CornerRadius="20" Width="200" Margin=" 10 0 0 0">
+                            <!--<Border.Style>
+                                <Style TargetType="Border">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding IsSelected}" Value="true">
+                                            <Setter Property="Background" Value="LightGray"></Setter>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding IsSelected}" Value="false">
+                                            <Setter Property="Background" Value="#36343a"></Setter>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>-->
+
+                            <Label Name="lb_name" Content="{Binding Name}" MouseDown="Label_MouseDown" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                                <!-- 
+                                <Label.Style>
+                                   
+                                    <Style TargetType="Label">
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding IsSelected}" Value="true">
+                                                <Setter Property="Foreground" Value="Black"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding IsSelected}" Value="false">
+                                                <Setter Property="Foreground" Value="White"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                    </Label.Style>
+                                -->
+                            </Label>
+                        </Border>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</UserControl>

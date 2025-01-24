@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="ClientApplication.user_controls.SearchBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ClientApplication.user_controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="56" d:DesignWidth="305">
+    <UserControl.Resources>
+
+    </UserControl.Resources>
+    <Border Background="#2b292f"
+            CornerRadius="25"
+            Name="Control"
+            BorderThickness="2" MouseDown="Control_OnMouseDown">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="5*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1.5*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <TextBox Name="tb_searchbar" BorderThickness="0" MouseEnter="Searchfield_MouseDown" Background="#2b292f" Grid.Column="1" Text="" FontSize="15" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></TextBox>
+            <Image Name="img_clear" MouseDown="Img_clear_OnMouseDown" Width="30" Grid.Column="2" HorizontalAlignment="Center" Source="../images/X-icon.png"></Image>
+            <Image Name="img_search" MouseDown="img_search_MouseDown" Width="30" Grid.Column="3" HorizontalAlignment="Center" Source="../images/search.png"></Image>
+        </Grid>
+    </Border>
+</UserControl>

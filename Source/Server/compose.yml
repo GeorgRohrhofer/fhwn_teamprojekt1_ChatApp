@@ -1,0 +1,19 @@
+services:
+  csproject:
+    build: ServerApplication
+    ports:
+      - 43443:43443
+    depends_on:
+      - postgres
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_PASSWORD: secret
+    restart: unless-stopped
+  flyway:
+      image: flyway/flyway
+      command: -url=jdbc:postgresql://postgres:5432/postgres -schemas=public -user=postgres -password=secret -connectRetries=60 migrate -mixed=true
+      volumes: 
+        - .:/flyway/sql
+      depends_on:
+        - postgres

@@ -1,0 +1,253 @@
+﻿<UserControl x:Class="ClientApplication.user_controls.ChatMessageList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ClientApplication.user_controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="1000"
+             Background="#D3D3D3">
+    <UserControl.Resources>
+        <ContextMenu x:Key="cm_modifyUsers">
+            <local:OnlineUsersView x:Name="cm_onlineUsers"></local:OnlineUsersView>
+            <Grid Height="70" Width="250">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Content="apply"></Button>
+                <Button Grid.Column="1" Content="close"></Button>
+            </Grid>
+
+        </ContextMenu>
+
+        <!--
+        This Style is for the header-bar of the ChatMessageList
+        -->
+        <Style x:Key="Header" TargetType="Grid">
+            <Setter Property="Background" Value="#848484"></Setter>
+        </Style>
+
+        <!--
+        This Style is used for the Buttons which are located inside the header-bar
+        -->
+        <Style x:Key="HeaderButton" TargetType="Button">
+            <Setter Property="Background" Value="#848484"></Setter>
+            <Setter Property="IsHitTestVisible" Value="False"></Setter>
+            <Setter Property="BorderThickness" Value="0"></Setter>
+        </Style>
+        <!--
+        This Style defines how the bar where the textfield for the message and the button to send looks.
+        -->
+        <Style x:Key="SendBox" TargetType="Grid">
+            <Setter Property="Background" Value="#E1DAE5"></Setter>
+        </Style>
+
+        <!--
+        This Style defines how the textbox looks and how it behaves when a message to long or a single line is entered.
+        -->
+        <Style x:Key="SendTextBox" TargetType="TextBox">
+            <Setter Property="Background" Value="#E1DAE5"></Setter>
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="TextWrapping" Value="Wrap"></Setter>
+            <Setter Property="TextAlignment" Value="Justify"></Setter>
+            <Setter Property="BorderThickness" Value="0"></Setter>
+        </Style>
+
+        <!--
+        This Style defines how the title of the chat looks like.
+        -->
+        <Style x:Key="HeaderLabel" TargetType="Label">
+            <Setter Property="Foreground" Value="#FDFDFD"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Left"></Setter>
+        </Style>
+
+        <!--
+        This Style defines how the button to send looks.
+        -->
+        <Style x:Key="SendButton" TargetType="Button">
+            <Setter Property="Background" Value="#E1DAE5"></Setter>
+        </Style>
+
+        <!--
+        This Style defines how the icon for the send button looks like
+        -->
+        <Style x:Key="SendImage" TargetType="Image">
+            <Setter Property="Height" Value="50"></Setter>
+        </Style>
+
+        <!--
+        This Style defines how the list where the chat messages are displayed looks like.
+        -->
+        <Style x:Key="ChatMessageList" TargetType="ListBox">
+            <Setter Property="Background" Value="#D3D3D3"></Setter>
+            <Setter Property="BorderThickness" Value="0"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Stretch"></Setter>
+            <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+        </Style>
+
+        <!--
+        This Style sets the look of the individual items inside the listbox where the chat messages are displayed.
+        -->
+        <Style x:Key="MessageDesign" TargetType="ListBoxItem">
+            <Setter Property="HorizontalAlignment" Value="Stretch"></Setter>
+            <Setter Property="Focusable" Value="False"></Setter>
+            <Setter Property="IsHitTestVisible" Value="False"></Setter>
+            <Setter Property="FontSize" Value="20"></Setter>
+        </Style>
+
+        <!--
+        This Style defines how the message text looks like.
+        -->
+        <Style x:Key="MessageBoxDesignText" TargetType="TextBlock">
+            <Setter Property="Margin" Value="10, 0, 10, 0"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="TextWrapping" Value="Wrap"></Setter>
+            <Setter Property="TextAlignment" Value="Justify"></Setter>
+        </Style>
+
+        <!--
+        This Style defines how the username inside the message looks like.
+        -->
+        <Style x:Key="MessageBoxDesignUsername" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="15"></Setter>
+            <Setter Property="Margin" Value="10, 0, 10, 0"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="TextWrapping" Value="Wrap"></Setter>
+            <Setter Property="TextAlignment" Value="Justify"></Setter>
+        </Style>
+
+        <!--
+        This Style defines how the timestamp is displayed
+        -->
+        <Style x:Key="MessageBoxDesignTimeStamp" TargetType="TextBlock">
+            <Setter Property="Margin" Value="10, 0, 10, 10"></Setter>
+            <Setter Property="FontSize" Value="13"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="TextWrapping" Value="Wrap"></Setter>
+            <Setter Property="TextAlignment" Value="Justify"></Setter>
+        </Style>
+
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.15*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="0.2*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Style="{StaticResource Header}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="0.15*"></ColumnDefinition>
+                <ColumnDefinition Width="0.1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Viewbox HorizontalAlignment="Left" Grid.Column="0">
+                <Grid HorizontalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"></ColumnDefinition>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Name="lbl_header" Style="{StaticResource HeaderLabel}" Content="{Binding ChatName}"/>
+                    <ItemsControl VerticalAlignment="Center" Grid.Column="1" ItemsSource="{Binding UsersInChat}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Label BorderThickness="0" Background="Transparent" Content="{Binding Path=Name, StringFormat=\{0\}}"></Label>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </Grid>
+            </Viewbox>
+
+            <Viewbox Grid.Column="1">
+                <Button Name="btn_add" Style="{StaticResource HeaderButton}" Visibility="Hidden">
+                    <Image Source="../images/plus-icon.png" Margin="0,200,0,200"></Image>
+                </Button>
+            </Viewbox>
+            <Viewbox Grid.Column="2">
+                <!--<Button Click="btn_options_Click" Name="btn_options" Style="{StaticResource HeaderButton}" IsHitTestVisible="True">
+                    
+                </Button>-->
+                <Image Name="img_options" MouseDown="Img_options_OnMouseDown" Source="../images/settings-icon.png" Margin="0,10,0,10"/>
+            </Viewbox>
+        </Grid>
+
+        <!-- Chat Messages -->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="15*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <ListBox Name="lb_messages" Grid.Column="1" ItemsSource="{Binding Messages}" ItemContainerStyle="{StaticResource MessageDesign}" Style="{StaticResource ChatMessageList}" ScrollViewer.ScrollChanged="lb_messages_ScrollChanged">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid HorizontalAlignment="Stretch" Name="MessageGrid">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"></ColumnDefinition>
+                                <ColumnDefinition Width="1*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                            <Border>
+                                <Border.Style>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="8"></Setter>
+                                        <Setter Property="MaxWidth" Value="{Binding ActualWidth, ElementName=MessageGrid}"></Setter>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding OwnMessage}" Value="true">
+                                                <Setter Property="Grid.Column" Value="1"></Setter>
+                                                <Setter Property="Background" Value="#5E438F"></Setter>
+                                            </DataTrigger>
+
+                                            <DataTrigger Binding="{Binding OwnMessage}" Value="false">
+                                                <Setter Property="Grid.Column" Value="0"></Setter>
+                                                <Setter Property="Background" Value="#1A181E"></Setter>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Border.Style>
+                                <StackPanel>
+                                    <TextBlock Text="{Binding Username}" Style="{StaticResource MessageBoxDesignUsername}"></TextBlock>
+                                    <TextBlock Text="{Binding MessageText}" Style="{StaticResource MessageBoxDesignText}"></TextBlock>
+                                    <TextBlock Text="{Binding TimeStampString}" Style="{StaticResource MessageBoxDesignTimeStamp}"></TextBlock>
+                                </StackPanel>
+                            </Border>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+
+        <Grid Grid.Row="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="15*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1" Style="{StaticResource SendBox}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="8*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBox Name="tb_send" Style="{StaticResource SendTextBox}" MaxLength="500" TextChanged="tb_send_TextChanged"></TextBox>
+
+                <Button IsDefault="True" Name="btn_send" Click="btn_send_Click" Grid.Column="3" Style="{StaticResource SendButton}">
+                    <Image Source="../images/send-icon.jpg" Style="{StaticResource SendImage}">
+                    </Image>
+                </Button>
+                
+            </Grid>
+
+            <Label Name="lbl_FeedbackMessage" Grid.Row="1" Grid.Column="1" Content="" FontSize="15" Height="40" VerticalContentAlignment="Top" Margin="0,-6,0,0" Foreground="#AA0000"></Label>
+        </Grid>
+    </Grid>
+</UserControl>

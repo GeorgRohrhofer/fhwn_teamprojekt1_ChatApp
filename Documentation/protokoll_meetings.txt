@@ -1,0 +1,163 @@
+Protokoll: Tägliche Besprechung zur Koordination vom Teamprojekt
+ 
+Datum: 14.01.2025
+Uhrzeit:  08:36
+Ort:  FH Wiener Neustadt
+Teilnehmer: Leo Bruckner, Ralph Lettner, Matthias Kuntner, Georg Rohrhofer, Ahmed Othman & Betreuer
+Protokollführer:  Ahmed Othman
+ 
+Agenda: 
+ 
+Thema Nr.1: Daily Scrum
+ 
+Notizen zur Diskussion: 
+•	Sprint Planung vorgestellt
+
+•	Zusammen für jedes Teammitglied folgende Punkte besprochen:
+-	Was ist gestern geschehen
+-	Was ist für heute geplant
+
+Ergebnis: 
+Was ist zu erledigen? 
+Leo: Docker Image erstellen, WPF erstellen
+Ralph: UI Design, Registrierung und Login
+Georg: Modellierung Software und Datenbank
+Matthias: Modellierung Software, Implementierung Messages
+Ahmed: Modellierung Software, Implementierung Messages
+Lukas: Modellierung Software, Serverapplikation aufgesetzt
+
+Sonstiges 
+Sonstige Anmerkungen: 
+
+-------------------------------------------------------------------
+
+Datum: 15.01
+Uhrzeit:  08:30
+Ort:  FH Wiener Neustadt
+Teilnehmer: Leo Bruckner, Ralph Lettner, Matthias Kuntner, Georg Rohrhofer, Ahmed Othman & Betreuer
+Protokollführer:  Ahmed Othman  
+
+Thema Nr.1 Daily Scrum
+
+Notizen zur Diskussion: 
+
+Jedes Teammitglied hat seinen Fortschritt seit dem letzten Meeting und den Plan für heute vorgestellt 
+
+Ergebnis 
+Was ist zu erledigen?
+
+Leo: Wpf fertigstellen, Docker fixen
+Ralph: Bugs gefixt, Client-Server Kommunikation
+Georg: Wpf fertigstellen
+Matthias: Client Registration implementiert, Client-Server Kommunikation Datenaustausch
+Ahmed: Client Login implementiert, Welcoming Page einrichten 
+Lukas: Entityframework inkl. Datenbankverbindung einrichten, Client-Server Kommunikation Datenaustausch
+
+
+-------------------------------------------------------------------
+
+Datum: 16.01
+Uhrzeit:  08:30
+Ort:  FH Wiener Neustadt
+Teilnehmer: Leo Bruckner, Ralph Lettner, Matthias Kuntner, Georg Rohrhofer, Ahmed Othman & Betreuer
+Protokollführer:  Ahmed Othman  
+
+Thema Nr.1 Daily Scrum
+Notizen zur Diskussion: 
+
+Jedes Teammitglied hat seinen Fortschritt seit dem letzten Meeting und den Plan für heute vorgestellt 
+
+
+-------------------------------------------------------------------
+
+Datum: 17.01
+Uhrzeit:  08:30
+Ort:  FH Wiener Neustadt
+Teilnehmer: Leo Bruckner, Ralph Lettner, Matthias Kuntner, Georg Rohrhofer, Ahmed Othman & Betreuer
+Protokollführer:  Ahmed Othman  
+
+Thema Nr.1 Daily Scrum
+Notizen zur Diskussion: 
+MVP inkl Sprint Retrospective durchgeführt
+
+
+Datum: 20.01
+Uhrzeit:  08:30
+Ort:  FH Wiener Neustadt
+Teilnehmer: Leo Bruckner, Ralph Lettner, Matthias Kuntner, Georg Rohrhofer, Ahmed Othman & Betreuer
+Protokollführer:  Ahmed Othman  
+
+Thema Nr.1 Daily Scrum
+Notizen zur Diskussion:
+Jedes Teammitglied hat seinen Fortschritt seit dem letzten Meeting und den Plan für heute vorgestellt 
+
+Ergebnis 
+Was ist zu erledigen?
+
+Leo:
+Ralph:
+Georg:
+Matthias: 
+Ahmed: 
+Lukas: 
+
+
+Datum: 21.01
+Uhrzeit:  08:33
+Ort:  FH Wiener Neustadt
+Teilnehmer: Leo Bruckner, Ralph Lettner, Matthias Kuntner, Georg Rohrhofer, Ahmed Othman & Betreuer
+Protokollführer:  Ahmed Othman  
+
+Thema Nr.1 Daily Scrum
+Notizen zur Diskussion:
+Jedes Teammitglied hat seinen Fortschritt seit dem letzten Meeting und den Plan für heute vorgestellt 
+
+Ergebnis 
+Was ist zu erledigen?
+
+Leo:
+Ralph:
+Georg:
+Matthias: 
+Ahmed: 
+Lukas: 
+
+Datum: 22.01
+Uhrzeit:  08:30
+Ort:  FH Wiener Neustadt
+Teilnehmer: Leo Bruckner, Ralph Lettner, Matthias Kuntner, Georg Rohrhofer, Ahmed Othman & Betreuer
+Protokollführer:  Ahmed Othman  
+
+Thema Nr.1 Daily Scrum
+Notizen zur Diskussion:
+Jedes Teammitglied hat seinen Fortschritt seit dem letzten Meeting und den Plan für heute vorgestellt 
+
+Ergebnis 
+Was ist zu erledigen?
+
+Leo:
+Ralph:
+Georg:
+Matthias: 
+Ahmed: 
+Lukas: 
+
+Datum: 23.01
+Uhrzeit:  08:31
+Ort:  FH Wiener Neustadt
+Teilnehmer: Leo Bruckner, Ralph Lettner, Matthias Kuntner, Georg Rohrhofer, Ahmed Othman & Betreuer
+Protokollführer:  Ahmed Othman  
+
+Thema Nr.1 Sprint Retrospective
+Notizen zur Diskussion:
+MVP inkl Sprint Retrospective durchgeführt. Danach offene Fragen für die Lesson abgeklärt.
+
+Ergebnis 
+Was ist zu erledigen?
+
+Leo: Lesson vorbereiten, Dokumentation
+Ralph:
+Georg: Lesson vorbereiten, Projekt Dokumentation (Sprint Review 2)
+Matthias: Lesson vorbereiten, Projekt dokumentation, Kleinigkeiten am Client fertigstellen
+Ahmed: Lesson vorbereiten, Projekt dokumentation, Code dokumentation, kleinigkeiten am Client fixen
+Lukas: Lesson vorbereiten, Projekt dokumentation, Server Tests schreiben

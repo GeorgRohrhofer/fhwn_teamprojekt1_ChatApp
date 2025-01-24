@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="dialogs\CreateNewChatDialog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="dialogs\EditChatWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\AdminOptions_Page.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\Login_Page.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\Options_Page.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\Register_Page.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\UserOptions_Page.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\Welcome_Window.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="user_controls\AdminOptions.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="user_controls\OpenChatsList.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\ChatWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ChatWindowPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="user_controls\ChatMessageList.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="user_controls\OnlineUsersView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="user_controls\SearchBar.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="dialogs\CreateNewChatDialog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="dialogs\EditChatWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\AdminOptions_Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Login_Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Options_Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Register_Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\UserOptions_Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Welcome_Window.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="user_controls\AdminOptions.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="user_controls\OpenChatsList.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\ChatWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ChatWindowPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="user_controls\ChatMessageList.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="user_controls\OnlineUsersView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="user_controls\SearchBar.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

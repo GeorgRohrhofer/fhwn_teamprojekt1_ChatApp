@@ -1,0 +1,63 @@
+﻿<Page x:Class="ClientApplication.Pages.ChatWindowPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ClientApplication.Pages"
+      xmlns:usercontrols="clr-namespace:ClientApplication.user_controls"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ChatWindowPage">
+    <Page.Resources>
+        <Style x:Key="ChatNameTemplate" TargetType="Label">
+            <Setter Property="Background" Value="#1A181E"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+        </Style>
+
+        <Style x:Key="SearchBarStyle" TargetType="TextBox">
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border Background="#2b292f" 
+                            CornerRadius="15" 
+                            BorderBrush="#2b292f" 
+                            BorderThickness="2">
+                            <ContentPresenter HorizontalAlignment="Center" 
+                        VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <Grid Name="ChatOverview">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*">
+                </RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="7*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="7*"></ColumnDefinition>
+                <ColumnDefinition Width="0.5*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <!-- First Column -->
+            <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="0">
+                <Image Name="img_plus_icon" Source="../images/plus-icon.png" Margin="10,10,19,10" MouseDown="img_plus_icon_MouseDown"></Image>
+                <Image Name="img_options" Source="../images/settings-icon.png" VerticalAlignment="Center" MouseDown="img_options_MouseDown"></Image>
+            </StackPanel>
+            <!--<Image HorizontalAlignment="Left" Source="images/settings-icon.png"></Image>-->
+            <!--<usercontrols:AdminOptions Grid.Column="0" Grid.Row="0"></usercontrols:AdminOptions>-->
+
+            <usercontrols:OpenChatsList x:Name="uc_openchats" Grid.Column="0" Grid.Row="2"></usercontrols:OpenChatsList>
+            <!-- Second Column -->
+            <usercontrols:ChatMessageList x:Name="uc_message_list" Grid.Row="1" Grid.Column="1" Grid.RowSpan="2"></usercontrols:ChatMessageList>
+            <usercontrols:SearchBar x:Name="uc_serachbar" Grid.Row="1" Grid.Column="0" Margin="10 0 10 10"></usercontrols:SearchBar>
+        </Grid>
+    </Grid>
+</Page>

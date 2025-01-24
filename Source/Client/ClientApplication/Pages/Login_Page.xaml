@@ -1,0 +1,104 @@
+﻿<Page x:Class="ClientApplication.Pages.Login_Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ClientApplication.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="600"
+      Title="Login_Page">
+
+    <Page.Resources>
+        <Style x:Key="ButtonPlsBeRound" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="Black" 
+                            CornerRadius="8" 
+                            BorderBrush="White" 
+                            BorderThickness="2">
+                            <ContentPresenter HorizontalAlignment="Center" 
+                                          VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="customInputFieldStyle" TargetType="TextBox">
+            <Setter Property="Padding" Value="20 0 0 0"></Setter>
+            <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+
+            <Setter Property="Foreground" Value="#787878"></Setter>
+            <Setter Property="Background" Value="#1e1e1e"></Setter>
+            <Setter Property="BorderBrush" Value="#444444"></Setter>
+            <Setter Property="BorderThickness" Value="3"></Setter>
+            <Setter Property="FontSize" Value="14"></Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border CornerRadius="8"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}" 
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                            <ScrollViewer x:Name="PART_ContentHost" Margin="2" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="customPasswordFieldStyle" TargetType="PasswordBox">
+            <Setter Property="Padding" Value="20 0 0 0"></Setter>
+            <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+
+            <Setter Property="Foreground" Value="#787878"></Setter>
+            <Setter Property="Background" Value="#1e1e1e"></Setter>
+            <Setter Property="BorderBrush" Value="#444444"></Setter>
+            <Setter Property="BorderThickness" Value="3"></Setter>
+            <Setter Property="FontSize" Value="14"></Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="PasswordBox">
+                        <Border CornerRadius="8"
+                    Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}" 
+                    BorderThickness="{TemplateBinding BorderThickness}">
+                            <ScrollViewer x:Name="PART_ContentHost" Margin="2" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+    <Grid Name="LoginWindow" Background="White" ShowGridLines="False"  Width="600" Height="600">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.4*"></RowDefinition>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition Height="0.4*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="0.4*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="0.8*"></RowDefinition>
+
+
+        </Grid.RowDefinitions>
+        <Label  Name="lb_input_ip_error" Margin="20 25 20 0" Grid.Row="0" Content="Failed to connect to the server" Foreground="Red" VerticalAlignment="Center" Height="38" FontSize="19" Visibility="Hidden"></Label>
+        <Label Name="lb_input_ip_default" Margin="17,25,23,0" Content="IP-Address" Foreground="Black" VerticalAlignment="Center" Height="38" FontSize="19"/>
+        <TextBox Margin="16,32,24,36" Style="{StaticResource customInputFieldStyle}" Name="tb_ip" Grid.Row="1" Text="" TextChanged="tb_ip_TextChanged" Background="White" FontSize="20" Foreground="Black"></TextBox>
+
+        <Label Name="lb_input_username_default" Margin="19,11,21,0" Grid.Row="2" Content="Email / Username" Foreground="Black" VerticalAlignment="Top" FontSize="19" Height="35"></Label>
+        <Label Name="lb_input_username_wrong_username_error"  Margin="19,11,21,0" Grid.Row="2" Content="Email / Username or Password is wrong, try again" Foreground="Red" VerticalAlignment="Center" FontSize="19" Height="35" Visibility="Hidden"></Label>
+        <Label Name="lb_input_username_empty_error"  Margin="19,11,21,0" Grid.Row="2" Content="Email / Username is empty" Foreground="Red" VerticalAlignment="Center" FontSize="19" Height="35" Visibility="Hidden"></Label>
+        <TextBox Margin="16,32,24,36" Style="{StaticResource customInputFieldStyle}" Name="tb_name" Grid.Row="3" Text="" TextChanged="tb_name_TextChanged" Background="White" FontSize="20" Foreground="Black"></TextBox>
+
+        <Label Name="lb_input_password_default" Margin="20,0,20,0" Grid.Row="4" Content="Password" Foreground="Black" VerticalAlignment="Center" FontSize="19" Height="35"></Label>
+        <Label Name="lb_input_password_password_wrong_error" Margin="20,0,20,0" Grid.Row="4" Content="Email / Username or Password is wrong, try again" Foreground="Red" VerticalAlignment="Center" FontSize="19" Height="35" Visibility="Hidden"></Label>
+        <Label Name="lb_input_password_empty_error" Margin="20,0,20,0" Grid.Row="4" Content="Password is empty" Foreground="Red" VerticalAlignment="Center" FontSize="19" Height="35" Visibility="Hidden"></Label>
+        <TextBox Margin="16,32,24,36" Style="{StaticResource customInputFieldStyle}" Name="tb_pw" Visibility="Collapsed" Focusable="False" Grid.Row="5" Text="" TextChanged="tb_pw_TextChanged" Background="White" FontSize="20" Foreground="Black"></TextBox>
+        <PasswordBox Margin="16,32,24,36" Style="{StaticResource customPasswordFieldStyle}" Name="pwb_pw" Grid.Row="5" Background="White" FontSize="20" Foreground="Black"></PasswordBox>
+        <CheckBox Name="cb_show_pw" Grid.Row="5" Margin="26,70,24,0" Content="Show Password" FontSize="17" VerticalContentAlignment="Center" Checked="cb_show_pw_Changed" Unchecked="cb_show_pw_Changed"></CheckBox>
+
+        <Button Style="{StaticResource ButtonPlsBeRound}" Margin="17,19,23,19" Grid.Row="6" Content="Login" VerticalContentAlignment="Center" Click="Button_Click" Foreground="White" Background="Black" FontSize="18" FontWeight="Bold" IsDefault="True"/>
+    </Grid>
+</Page>
