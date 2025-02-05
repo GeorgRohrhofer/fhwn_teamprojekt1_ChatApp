@@ -1,5 +1,8 @@
 # Team 3
 
+For issues and commits use:
+[gitmoji](https://gitmoji.dev/)
+
 ## How to setup
 
 ### Client
